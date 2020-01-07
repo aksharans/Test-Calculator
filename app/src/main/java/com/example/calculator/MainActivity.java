@@ -38,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 int ans = number1 + number2;
                 String ansStr = ans + "";
                 textview.setText(ansStr);
+
+                num1.getText().clear();
+                num2.getText().clear();
+
+
             }
 
 
@@ -59,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
                 int ans = number1 - number2;
                 String ansStr = ans + "";
                 textview.setText(ansStr);
+
+                num1.getText().clear();
+                num2.getText().clear();
             }
 
 
