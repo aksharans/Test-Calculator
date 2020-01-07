@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
                 num1.getText().clear();
                 num2.getText().clear();
+
             }
 
 
