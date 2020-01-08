@@ -17,10 +17,11 @@ public class MainActivity extends AppCompatActivity {
 
         Button add_btn = findViewById(R.id.add_btn);
         Button sub_btn = findViewById(R.id.sub_btn);
+        Button mul_btn = findViewById(R.id.mul_btn);
+        Button div_btn = findViewById(R.id.div_btn);
 
-        //final TextView textview = findViewById(R.id.txtview);
-        //final EditText num1 = findViewById(R.id.num1);
-        //final EditText num2 = findViewById(R.id.num2);
+
+
 
         add_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                int number1 = Integer.parseInt(num1.getText().toString());
-                int number2 = Integer.parseInt(num2.getText().toString());
-                int ans = number1 + number2;
+                float number1 = Float.parseFloat(num1.getText().toString());
+                float number2 = Float.parseFloat(num2.getText().toString());
+                float ans = number1 + number2;
                 String ansStr = ans + "";
                 textview.setText(ansStr);
 
@@ -59,9 +60,61 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                int number1 = Integer.parseInt(num1.getText().toString());
-                int number2 = Integer.parseInt(num2.getText().toString());
-                int ans = number1 - number2;
+                float number1 = Float.parseFloat(num1.getText().toString());
+                float number2 = Float.parseFloat(num2.getText().toString());
+                float ans = number1 - number2;
+                String ansStr = ans + "";
+                textview.setText(ansStr);
+
+                num1.getText().clear();
+                num2.getText().clear();
+
+            }
+
+
+        });
+
+
+        mul_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView textview = findViewById(R.id.txtview);
+                EditText num1 = findViewById(R.id.num1);
+                EditText num2 = findViewById(R.id.num2);
+
+                if (num1.getText().toString().matches("")||num2.getText().toString().matches("")){
+                    return;
+                }
+
+                float number1 = Float.parseFloat(num1.getText().toString());
+                float number2 = Float.parseFloat(num2.getText().toString());
+                float ans = number1 * number2;
+                String ansStr = ans + "";
+                textview.setText(ansStr);
+
+                num1.getText().clear();
+                num2.getText().clear();
+
+            }
+
+
+        });
+
+
+        div_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView textview = findViewById(R.id.txtview);
+                EditText num1 = findViewById(R.id.num1);
+                EditText num2 = findViewById(R.id.num2);
+
+                if (num1.getText().toString().matches("")||num2.getText().toString().matches("")){
+                    return;
+                }
+
+                float number1 = Float.parseFloat(num1.getText().toString());
+                float number2 = Float.parseFloat(num2.getText().toString());
+                float ans = number1 / number2;
                 String ansStr = ans + "";
                 textview.setText(ansStr);
 
@@ -83,6 +136,15 @@ public class MainActivity extends AppCompatActivity {
     public int addition(int num1, int num2) {
         return num1 + num2;
     }
+
+    public int multiplication(int num1, int num2) {
+        return num1 * num2;
+    }
+
+    public int division(int num1, int num2) {
+        return num1 / num2;
+    }
+
 
 
 }
