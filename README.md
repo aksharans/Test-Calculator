@@ -4,7 +4,7 @@ A simple calculator made to test out publishing to the play store and git.
 
 ## About
 
-Enter two numbers and you can add or subtract them.
+Enter two numbers and you can add, subtract, multiply, or divide them. 
 
 ## Play Store
 
